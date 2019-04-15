@@ -1,0 +1,61 @@
+﻿/// <reference path="../common/_colors.scss" />
+/// <reference path="../common/_fonts.scss" />
+/// <reference path="../common/_helpers.scss" />
+/// <reference path="../common/_responsive.scss" />
+
+#page-profile {
+    #main .page {
+        section + section {
+            margin-top: 50px;
+        }
+
+        .metadata {
+            margin-bottom: 20px;
+
+            a {
+                color: $color-text-light;
+                text-decoration: none;
+                white-space: nowrap;
+                font-size: 13px;
+                font-family: $font-family-secondary;
+                display: inline-block;
+                border: 1px solid transparent;
+                position: relative;
+                margin-left: 20px;
+
+                &:hover, &:active, &:focus {
+                    border-bottom-color: $color-text-light;
+                }
+
+                &.location:before {
+                    position: absolute;
+                    content: "\f3c5";
+                    left: -20px;
+                    top: 50%;
+                    margin-top: -0.5em;
+                    font-family: "Font Awesome 5 Free";
+                    font-size: 14px;
+                    font-weight: 900;
+                    line-height: 1;
+                    color: $color-brand-primary-light;
+                    -moz-osx-font-smoothing: grayscale;
+                    -webkit-font-smoothing: antialiased;
+                    display: inline-block;
+                    font-style: normal;
+                    font-variant: normal;
+                    text-rendering: auto;
+                }
+
+                & + a {
+                    margin-left: 40px;
+                }
+            }
+        }
+
+        .place-of-work {
+            & + .place-of-work {
+                margin-top: 40px;
+            }
+        }
+    }
+}

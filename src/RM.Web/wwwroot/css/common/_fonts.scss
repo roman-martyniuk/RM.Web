@@ -1,0 +1,57 @@
+﻿$font-family-primary: 'Open Sans', sans-serif;
+$font-family-secondary: 'Oswald', serif;
+$font-weight-bold: 700;
+$font-weight-semibold: 600;
+$font-weight-regular: 400;
+$line-height-default: 1.4;
+
+/*#region fonts */
+
+.font-bold {
+    font-weight: $font-weight-bold !important;
+}
+
+.font-semibold {
+    font-weight: $font-weight-semibold !important;
+}
+
+.font-regular {
+    font-weight: $font-weight-regular !important;
+}
+/*#endregion */
+
+/*#region text */
+.no-wrap {
+    white-space: nowrap !important;
+}
+
+.text-overflow-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-upper {
+    text-transform: uppercase !important;
+}
+
+.text-lower {
+    text-transform: lowercase !important;
+}
+
+.text-underlined {
+    text-decoration: underline !important;
+}
+/*#endregion */

@@ -1,0 +1,21 @@
+﻿@import 'vendors/_normalize.scss';
+@import 'vendors/_reset.scss';
+
+@import 'common/_colors.scss';
+@import 'common/_fonts.scss';
+@import 'common/_responsive.scss';
+@import 'common/_helpers.scss';
+@import 'common/_spacing.scss';
+@import 'common/_grid-system.scss';
+@import 'common/_typography.scss';
+
+@import 'components/_buttons.scss';
+@import 'components/_lists.scss';
+
+@import 'layout/_grid.scss';
+@import 'layout/_header.scss';
+@import 'layout/_main.scss';
+@import 'layout/_footer.scss';
+
+@import 'pages/_home.scss';
+@import 'pages/_profile.scss';

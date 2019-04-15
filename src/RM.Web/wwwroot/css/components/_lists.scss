@@ -1,0 +1,27 @@
+﻿/// <reference path="../common/_colors.scss" />
+/// <reference path="../common/_helpers.scss" />
+/// <reference path="../common/_responsive.scss" />
+
+ul.list {
+    margin: 10px 0 15px;
+
+    & > li {
+        padding-left: 20px;
+        position: relative;
+
+        &:before {
+            content: '';
+            background-color: $color-neutral-dark;
+            position: absolute;
+            left: 0;
+            top: 0.5em;
+            width: 5px;
+            height: 5px;
+        }
+
+        & + li {
+            margin-top: 5px;
+        }
+    }
+}
+

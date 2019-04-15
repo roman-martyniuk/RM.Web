@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html id="@ViewBag.PageId" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="@ViewBag.Description">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <link href="/css/rm.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800&amp;subset=cyrillic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="shortcut icon" href="/images/rm-logo-32x32.png" type="image/x-icon" />
+
+    @if (ViewBag.CanonicalUrl != null)
+    {
+        <link rel="canonical" href="@ViewBag.CanonicalUrl" />
+    }
+
+    @RenderSection("head", required: false)
+</head>
+<body>
+
+    <div class="content-holder">
+        <div id="top-bar">
+            @*<a href="https://goo.gl/maps/dN9X3L3CRHB2" target="_blank"><i class="fas fa-map-marker-alt"></i>Rivne, Ukraine</a>*@
+            @*<a href="tel:+380636225842"><i class="fas fa-mobile-alt"></i>+380 (63) 622-58-42</a>*@
+            <a href="https://t.me/roman_martyniuk"><i class="fab fa-telegram"></i>Telegram</a>
+            <a href="mailto:roman.martyniuk1987@gmail.com"><i class="fas fa-at"></i>roman.martyniuk1987@gmail.com</a>
+            @*<a><i class="fab fa-linkedin"></i>LinkedIn</a>*@
+        </div>
+        <header id="header">
+            <a id="logo" href="/" title="Roman Martyniuk">
+                <span class="icon"></span>
+                <span class="title">
+                    Roman Martyniuk
+                    <span class="slogan">The Persuit of Perfection</span>
+                </span>
+            </a>
+
+            <nav id="main-menu">
+                <a href="/">Home</a>
+                @*<a href="/projects.html">Projects</a>*@
+                <a href="/profile.html">Profile</a>
+                <a href="https://github.com/roman-martyniuk?tab=repositories" target="_blank" title="Roman Martyniuk's GitHub Repositories">Repositories</a>
+            </nav>
+        </header>
+
+        <div id="main">
+            @RenderBody()
+        </div>
+
+        <footer id="footer">© 2019 Roman Martyniuk</footer>
+    </div>
+
+    @RenderSection("modals", required: false)
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            var menuItem = document.querySelector('#main-menu a[href="' + location.pathname + '"]');
+            if (menuItem) {
+                menuItem.className = 'active';
+                menuItem.removeAttribute('href');
+            }
+        });
+    </script>
+
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>

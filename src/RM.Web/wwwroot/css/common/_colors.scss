@@ -1,0 +1,27 @@
+﻿$color-brand-primary-default: #303030;
+$color-brand-primary-light: lighten($color-brand-primary-default, 20%);
+$color-brand-primary-dark: darken($color-brand-primary-default, 20%);
+
+$color-brand-accent-default: #ffcc49;
+$color-brand-accent-light: lighten($color-brand-accent-default, 20%);
+$color-brand-accent-dark: darken($color-brand-accent-default, 20%);
+
+//colors for borders etc.
+$color-neutral-lightest: white;
+$color-neutral-light: #f8f8f8;
+$color-neutral-dark: #5b5b5b;
+$color-neutral-darkest: #3a3a3a;
+
+$color-text-default: #303030;
+$color-text-darkest: darken($color-text-default, 5%);
+$color-text-light: #85869c;
+$color-text-lightest: white;
+
+$color-feedback-success: #1e8956;
+$color-feedback-success-light: #d8f0ea;
+$color-feedback-info: #ced2de;
+$color-feedback-info-light: #f5f5f9;
+$color-feedback-warning: #ff9c1c;
+$color-feedback-warning-light: #FFF3E3;
+$color-feedback-danger: #d63030;
+$color-feedback-danger-light: #f8d7da;

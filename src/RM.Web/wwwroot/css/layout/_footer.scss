@@ -1,0 +1,10 @@
+﻿/// <reference path="../common/_colors.scss" />
+/// <reference path="../common/_helpers.scss" />
+/// <reference path="../common/_responsive.scss" />
+
+#footer {
+    padding: 20px 0;
+    color: $color-text-lightest;
+    font-size: 14px;
+    text-align: center;
+}

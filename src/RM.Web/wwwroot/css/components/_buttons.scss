@@ -1,0 +1,164 @@
+﻿/// <reference path="../common/_colors.scss" />
+/// <reference path="../common/_fonts.scss" />
+/// <reference path="../common/_helpers.scss" />
+/// <reference path="../common/_responsive.scss" />
+
+.btn {
+    text-align: center;
+    font-family: $font-family-secondary;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    padding: 0 10px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: 1px 1px 2px $color-neutral-dark;
+    border-radius: 2px;
+    text-decoration: none;
+    /*some DISABLED styles are common for all elements, they are in _helpers.scss*/
+    &.disabled, &[disabled] {
+        opacity: .5;
+    }
+
+    & > i {
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+    /*#region sizes */
+    &.icon-only {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+
+        & > i {
+            margin-right: 0;
+        }
+    }
+
+    &.xs {
+        min-width: 140px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+
+        @include media-for-screen-lg-and-down {
+            height: 25px;
+            line-height: 25px;
+        }
+    }
+
+    &.sm {
+        min-width: 200px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+
+        @include media-for-screen-lg-and-down {
+            height: 35px;
+            line-height: 35px;
+            font-size: 13px;
+        }
+    }
+
+    &.md {
+        min-width: 240px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 16px;
+
+        @include media-for-screen-lg-and-down {
+            height: 45px;
+            line-height: 45px;
+            font-size: 14px;
+        }
+    }
+
+    &.lg {
+        min-width: 300px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        @include media-for-screen-lg-and-down {
+            height: 55px;
+            line-height: 55px;
+            font-size: 16px;
+        }
+    }
+
+    & + .btn {
+        margin-left: 20px;
+    }
+
+    @include media-for-screen-xs { // temporary soltion, needs to be worked out
+        &:not(.icon-only) {
+            width: 100% !important;
+            min-width: 100% !important;
+            margin: 5px 0 !important;
+        }
+    }
+    /*#endregion */
+    /*#region colors */
+    &.primary {
+        background-color: $color-brand-primary-default;
+        color: $color-text-lightest;
+
+        &:hover {
+            background-color: lighten($color-brand-primary-default, 5%);
+        }
+
+        &:active, &:focus {
+            background-color: darken($color-brand-primary-default, 5%);
+            box-shadow: none;
+        }
+
+        &.icon-only {
+            line-height: 36px;
+        }
+    }
+
+    &.accent {
+        background-color: $color-brand-accent-default;
+        color: $color-text-darkest;
+
+        &:hover {
+            background-color: lighten($color-brand-accent-default, 5%);
+        }
+
+        &:active, &:focus {
+            background-color: darken($color-brand-accent-default, 5%);
+            box-shadow: none;
+        }
+
+        & > i {
+            &:first-of-type {
+                display: inline-block;
+            }
+
+            &:last-of-type {
+                display: none;
+            }
+        }
+
+        &:hover, &:active, &:focus {
+            & > i {
+                &:first-of-type {
+                    display: none;
+                }
+
+                &:last-of-type {
+                    display: inline-block;
+                }
+            }
+        }
+
+        &.icon-only {
+            border-width: 2px;
+            line-height: 32px;
+        }
+    }
+    /*#endregion */
+}
