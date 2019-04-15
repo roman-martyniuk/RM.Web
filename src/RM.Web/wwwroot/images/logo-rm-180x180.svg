@@ -2,8 +2,8 @@
   <rect width="140" height="140" x="20" y="20" fill="#ffcc49" rx="20" ry="20"/>
   <rect width="120" height="120" transform="rotate(45, 90, 90)" x="30" y="30" fill="none" stroke="#303030" stroke-width="10" rx="8" ry="8"/>
   <g font-family="Open Sans" fill="#303030" text-anchor="middle">
-    <text font-size="9" font-weight="700" x="90" y="60">THE PERSUIT</text>
+    <text font-size="9" font-weight="600" x="90" y="60">THE PERSUIT</text>
 		<text font-size="65" font-weight="800" x="90" y="114">RM</text>
-		<text font-size="9" font-weight="700" x="90" y="129">OF PERFECTION</text>
+		<text font-size="9" font-weight="600" x="90" y="129">OF PERFECTION</text>
 	</g>
 </svg>

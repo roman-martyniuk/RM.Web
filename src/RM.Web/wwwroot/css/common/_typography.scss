@@ -20,7 +20,7 @@ body {
 
 h1, h2, h3, h4 {
     font-family: $font-family-secondary;
-    font-weight: $font-weight-semibold;
+    font-weight: 600;
     color: $color-text-darkest;
 }
 
@@ -36,7 +36,7 @@ h1 {
         font-size: 16px;
         color: $color-text-default;
         text-shadow: none;
-        font-weight: $font-weight-semibold;
+        font-weight: 600;
         display: block;
         text-transform: none;
         margin-top: 10px;
@@ -69,7 +69,7 @@ h3 {
         margin-left: 5px;
         font-size: 16px;
         color: $color-text-light;
-        font-weight: $font-weight-regular;
+        font-weight: 400;
     }
 }
 
