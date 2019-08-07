@@ -1450,12 +1450,13 @@ h1 {
   h1 > .intro {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
-    color: #303030;
     text-shadow: none;
     font-weight: 600;
     display: block;
     text-transform: none;
-    margin-top: 10px; }
+    margin-top: 10px;
+    color: white;
+    text-shadow: 1px 1px 1px black; }
 
 h2 {
   padding: 10px 20px 10px 25px;
@@ -1513,6 +1514,7 @@ strong, b, .strong {
   box-shadow: 1px 1px 2px #5b5b5b;
   border-radius: 2px;
   text-decoration: none;
+  margin: 10px;
   /*some DISABLED styles are common for all elements, they are in _helpers.scss*/
   /*#region sizes */
   /*#endregion */
@@ -1569,13 +1571,6 @@ strong, b, .strong {
         height: 55px;
         line-height: 55px;
         font-size: 16px; } }
-  .btn + .btn {
-    margin-left: 20px; }
-  @media (max-width: 599.99px) {
-    .btn:not(.icon-only) {
-      width: 100% !important;
-      min-width: 100% !important;
-      margin: 5px 0 !important; } }
   .btn.primary {
     background-color: #303030;
     color: white; }
@@ -1624,12 +1619,17 @@ ul.list {
 
 html, body {
   width: 100%;
-  min-width: 460px;
-  min-height: 100%;
+  min-width: 420px; }
+
+html {
   height: 100%; }
 
 body {
-  position: relative; }
+  min-height: 100%;
+  /*height: 100%;*/
+  position: relative;
+  display: flex;
+  flex-direction: column; }
   body > .content-holder {
     display: flex;
     flex-direction: column;
@@ -1637,8 +1637,10 @@ body {
     width: 100%;
     max-width: 1100px;
     min-height: 100%;
+    height: 100%;
     margin: 0 auto;
-    padding: 0 20px; }
+    padding: 0 20px;
+    flex-grow: 1; }
     body > .content-holder > #main {
       flex-grow: 1; }
 
